@@ -1,0 +1,143 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #B0C4DE;
+  color: #000;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #4682B4;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 14px;
+  color: #5F9EA0;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.dashboard-item {
+  text-align: center;
+}
+
+.dashboard-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #4682B4;
+}
+
+.dashboard-item p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+form label {
+  flex: 1 0 100%;
+  font-weight: bold;
+  color: #4682B4;
+}
+
+form input, form select, form button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #4682B4;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #4169E1;
+}
+
+.history-section, .chart-section {
+  margin-bottom: 20px;
+}
+
+.history {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.history .transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.history .transaction.expense {
+  border-left: 5px solid #DB7093;
+}
+
+.history .transaction.income {
+  border-left: 5px solid #66CDAA;
+}
+
+.history .transaction button {
+  color: #000;
+  cursor: pointer;
+}
+
+.chart-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+  width: 100%;
+  height: auto;
+}

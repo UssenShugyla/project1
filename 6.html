@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Expense Tracker</h1>
+      <p>Отслеживайте свои доходы и расходы.</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="dashboard-item">
+        <h3>Общий доход:</h3>
+        <p id="total-income">0</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Общие расходы:</h3>
+        <p id="total-expenses">0</p>
+      </div>
+      <div class="dashboard-item">
+        <h3>Баланс:</h3>
+        <p id="balance">0</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Добавить транзакцию</h2>
+      <form id="transaction-form">
+        <label for="type">Тип:</label>
+        <select id="type" required>
+          <option value="income">Доход</option>
+          <option value="expense">Расход</option>
+        </select>
+
+        <label for="amount">Сумма:</label>
+        <input type="number" id="amount" placeholder="Введите сумму" required>
+
+        <label for="category">Категория:</label>
+        <select id="category" required>
+          <optgroup label="Доходы">
+            <option value="Зарплата">Зарплата</option>
+            <option value="Стипендия">Стипендия</option>
+            <option value="Инвестиции">Инвестиции</option>
+          </optgroup>
+          <optgroup label="Расходы">
+            <option value="Транспорт">Транспорт</option>
+            <option value="Еда">Еда</option>
+            <option value="Покупки для дома">Покупки для дома</option>
+            <option value="Шоппинг">Шоппинг</option>
+            <option value="Образование">Образование</option>
+            <option value="Здоровье">Здоровье</option>
+            <option value="Подарки">Подарки</option>
+          </optgroup>
+        </select>
+
+        <label for="description">Описание:</label>
+        <input type="text" id="description" placeholder="Краткое описание">
+
+        <button type="submit">Добавить</button>
+      </form>
+    </section>
+
+    <section class="history-section">
+      <h2>История транзакций</h2>
+      <div class="history"></div>
+    </section>
+
+    <section class="chart-section">
+      <h2>График доходов и расходов</h2>
+      <div class="chart-container">
+        <canvas id="transactionsChart"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <script src="mid.js"></script>
+</body>
+</html>
